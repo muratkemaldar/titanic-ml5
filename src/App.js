@@ -70,7 +70,7 @@ function App() {
       // nn.normalizeData();
 
       const trainingOptions = {
-        epochs: 8, // what to choose here?
+        epochs: 12, // what to choose here?
         batchSize: 12
       };
 
@@ -89,9 +89,9 @@ function App() {
         </small>
       </p>
 
-      <h2>Select passenger</h2>
+      <h2>Would this passenger survive?</h2>
       <select defaultValue="default" onChange={e => classify(e.target.value)}>
-        <option key="default">-- Select passenger --</option>
+        <option key="default">-- Select test subject --</option>
         {testSubjects.map(sample => (
           <option key={sample.PassengerId} value={sample.PassengerId}>
             {sample.Name}
