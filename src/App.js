@@ -14,7 +14,7 @@ function App() {
     if (!inputs || !inputs.length) return;
     // (!) classifyMultiple with all inputs (array of arrays) does not work
     // (!) classify (with single input array (inputs[0])) works
-    nn.classifyMultiple(inputs[0], (error, results) => {
+    nn.classifyMultiple(inputs, (error, results) => {
       if (error) {
         console.error(error);
         return;
